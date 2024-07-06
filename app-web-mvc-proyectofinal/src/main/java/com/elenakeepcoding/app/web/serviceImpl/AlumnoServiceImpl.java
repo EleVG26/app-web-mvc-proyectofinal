@@ -20,4 +20,28 @@ public class AlumnoServiceImpl implements AlumnoService{
 		return alumnoRepository.findAll();
 	}
 
+	@Override
+	public Alumno guardarAlumno(Alumno alumno) {
+
+		return alumnoRepository.save(alumno);
+	}
+
+	@Override
+	public Alumno obtenerAlumnoPorId(Long id) {
+		
+		return alumnoRepository.findById(id).orElse(null);
+	}
+
+	@Override
+	public Alumno actualizarAlumno(Alumno alumno) {	
+		return null;
+	}
+
+	@Override
+	public Alumno eliminarAlumno(Long id) {
+		return null;
+	}
+
+	
+
 }
