@@ -14,6 +14,6 @@ public interface AlumnoService {
 	
 	public Alumno actualizarAlumno(Alumno alumno);
 	
-	public Alumno eliminarAlumno(Long id);
+	public void eliminarAlumno(Long id);
 
 }
