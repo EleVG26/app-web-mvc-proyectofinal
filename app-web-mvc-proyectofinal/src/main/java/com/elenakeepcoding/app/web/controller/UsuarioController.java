@@ -71,5 +71,12 @@ public class UsuarioController {
         model.addAttribute("usuarios", usuarioService.listaUsuarios());
         return "usuario";
     }
+    
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/login";
+    }
+    
 }
 

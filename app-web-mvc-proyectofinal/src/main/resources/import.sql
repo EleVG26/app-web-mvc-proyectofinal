@@ -5,6 +5,6 @@ INSERT INTO alumno(nombre,apellido,telefono,email,dni,fecha_nac) VALUES('Solecit
 INSERT INTO alumno(nombre,apellido,telefono,email,dni,fecha_nac) VALUES('Bejnamin','Muriel',6124545,'bm@email.com','1059966','2010-05-27')
 INSERT INTO alumno(nombre,apellido,telefono,email,dni,fecha_nac) VALUES('Rafaelito','Vargas',6124545,'rv@email.com','1055544','2010-12-31')
 
-INSERT INTO usuario(nombre, email, username, password, activo) VALUES('Juan Perez', 'juan.perez@email.com', 'juanp', 'password123', true);
-INSERT INTO usuario(nombre, email, username, password, activo) VALUES('Ana Gomez', 'ana.gomez@email.com', 'anag', 'password123', true);
-INSERT INTO usuario(nombre, email, username, password, activo) VALUES('Carlos Ruiz', 'carlos.ruiz@email.com', 'carlor', 'password123', true);
+INSERT INTO usuario(nombre, email, username, password, activo) VALUES('Juan Perez', 'juan.perez@email.com', 'juanp', '123', true);
+INSERT INTO usuario(nombre, email, username, password, activo) VALUES('Ana Gomez', 'ana.gomez@email.com', 'anag', '456', false);
+INSERT INTO usuario(nombre, email, username, password, activo) VALUES('Carlos Ruiz', 'carlos.ruiz@email.com', 'carlor', '789', true);
