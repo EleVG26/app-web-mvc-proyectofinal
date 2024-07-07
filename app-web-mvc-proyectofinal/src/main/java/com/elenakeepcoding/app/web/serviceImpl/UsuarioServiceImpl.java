@@ -40,6 +40,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 		usuarioRepository.deleteById(id);
 		
 	}
+
+	@Override
+	public boolean existeUsuarioPorUsername(String username) {
+		return usuarioRepository.findByUsername(username) != null;
+	}
 	
 	
 }

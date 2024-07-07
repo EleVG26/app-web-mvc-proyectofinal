@@ -47,11 +47,29 @@ public class UsuarioController {
         model.addAttribute("usuario", usuario);
         return "registro";
     }
+    
+    
 
     @PostMapping("/registro")
-    public String registroUsuario(@ModelAttribute("usuario") Usuario usuario) {
-        usuarioService.guardarUsuario(usuario);
-        return "redirect:/login";
+    public String registroUsuario(@ModelAttribute("usuario") Usuario usuario, Model model) {
+        try {
+            if (usuarioService.existeUsuarioPorUsername(usuario.getUsername())) {
+                model.addAttribute("error", "Error al registrar, usuario existente");
+                return "registro";
+            }
+            usuario.setActivo(true);
+            usuarioService.guardarUsuario(usuario);
+            return "redirect:/usuario";
+        } catch (Exception e) {
+            model.addAttribute("error", "Error al registrar, usuario existente ");
+            return "registro";
+        }
+    }
+    
+    @GetMapping("/usuario")
+    public String listarUsuarios(Model model) {
+        model.addAttribute("usuarios", usuarioService.listaUsuarios());
+        return "usuario";
     }
 }
 

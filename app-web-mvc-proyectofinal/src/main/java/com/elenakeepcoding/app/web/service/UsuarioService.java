@@ -14,5 +14,7 @@ public interface UsuarioService {
 	public Usuario obtenerUsuarioPorUsernameYPassword(String username, String password);
 
     public void eliminarUsuario(Long id);
+    
+    boolean existeUsuarioPorUsername(String username);
 
 }
